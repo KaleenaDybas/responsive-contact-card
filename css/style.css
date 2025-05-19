@@ -1,0 +1,94 @@
+/* General body styling */
+body {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  background-color: #4A6D57;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Article styling */
+article {
+  display: grid;
+  width: 90vw;
+  max-width: 800px;
+  background-color: #2A3B34;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Profile picture container */
+.pic-container {
+  border: 5px solid #E2D6A1;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #4A6D57;
+  margin-bottom: 20px;
+  max-width: 200px;
+  height: auto;
+}
+
+.pic-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Grid container for content */
+.grid-container {
+  display: grid;
+  gap: 15px;
+  width: 100%;
+  padding: 0 10px;
+}
+
+/* Grid items styling */
+.grid-item1 h1,
+.grid-item2 h2 {
+  color: #E2D6A1;
+}
+
+.grid-item1 p,
+.grid-item2 p {
+  color: #C0D9D9;
+}
+
+.grid-item1 h1 {
+  font-size: 2.2rem;
+}
+
+.grid-item2 h2 {
+  font-size: 1.5rem;
+}
+
+/* Media Queries */
+@media (min-width: 500px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  article {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .pic-container {
+    margin-right: 20px;
+    max-width: 250px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
